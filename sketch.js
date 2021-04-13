@@ -27,13 +27,16 @@ function setup(){
     box4 = new Box(920,240,70,70)
     pig2 = new Pig(810,240)
     log2 = new Log(810,180, 300, PI/2)
+    platform = new Ground(100,280,300,200)
     ground = new Ground(600,390,1200,20);
 
     box5 = new Box (810,160,70,70)
     log3 = new Log(760,120,150,PI/7)
     log4 = new Log(870,120,150,-PI/7)
-    log6 = new Log(100,100,100, PI/2)
-    chain = new Chain(bird1.body, log6.body)
+
+    
+    
+    sling = new Slingshot(bird1.body, {x:200, y:100})
 }
 
 function draw(){
@@ -54,8 +57,16 @@ function draw(){
     box5.display()
     log3.display()
     log4.display()
-    log6.display()
-    chain.display()
+    sling.display()
+    platform.display()
     
 
+}
+
+function mouseDragged(){
+    Matter.Body.setPosition(bird1.body,{x:200, y:100})
+}
+
+function mouseReleased(){
+    sling.fly()
 }
