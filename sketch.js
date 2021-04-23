@@ -27,7 +27,7 @@ function setup(){
     box4 = new Box(920,240,70,70)
     pig2 = new Pig(810,240)
     log2 = new Log(810,180, 300, PI/2)
-    platform = new Ground(100,280,300,200)
+    platform = new Ground(100,300,300,165)
     ground = new Ground(600,390,1200,20);
 
     box5 = new Box (810,160,70,70)
@@ -36,7 +36,7 @@ function setup(){
 
     
     
-    sling = new Slingshot(bird1.body, {x:200, y:100})
+    sling = new Slingshot(bird1.body, {x:200, y:50})
 }
 
 function draw(){
