@@ -53,4 +53,8 @@ class Slingshot {
 
 
     }
+
+    reattach(body1){
+        this.sling.bodyA = body1
+    }
 }

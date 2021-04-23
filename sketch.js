@@ -64,9 +64,15 @@ function draw(){
 }
 
 function mouseDragged(){
-    Matter.Body.setPosition(bird1.body,{x:200, y:100})
+    Matter.Body.setPosition(bird1.body,{x:mouseX, y:mouseY})
 }
 
 function mouseReleased(){
     sling.fly()
+}
+
+function keyPressed(){
+    if(keyCode===32){
+        sling.reattach(bird1.body)
+    }
 }
